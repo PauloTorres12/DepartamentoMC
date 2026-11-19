@@ -88,6 +88,55 @@ if (contactForm) {
     });
 }
 
+// --- Form Accordion Toggle ---
+const accordionToggle = document.querySelector('.accordion-toggle');
+const accordionContent = document.querySelector('.accordion-content');
+
+if (accordionToggle && accordionContent) {
+    accordionToggle.addEventListener('click', () => {
+        accordionToggle.classList.toggle('active');
+        accordionContent.classList.toggle('active');
+    });
+}
+
+// --- Floating WhatsApp Button ---
+const waFloatToggle = document.getElementById('whatsapp-float-toggle');
+const waFloatMenu = document.getElementById('whatsapp-float-menu');
+
+if (waFloatToggle && waFloatMenu) {
+    waFloatToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        waFloatMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.whatsapp-float')) {
+            waFloatMenu.classList.remove('active');
+        }
+    });
+}
+
+// --- Map Tabs (Mapa / Street View) ---
+const mapTabs = document.querySelectorAll('.map-tab');
+const mapTabContents = document.querySelectorAll('.map-tab-content');
+
+mapTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const targetTab = tab.dataset.tab;
+
+        // Remove active from all tabs and contents
+        mapTabs.forEach(t => t.classList.remove('active'));
+        mapTabContents.forEach(c => c.classList.remove('active'));
+
+        // Activate clicked tab and corresponding content
+        tab.classList.add('active');
+        const targetContent = document.getElementById('tab-' + targetTab);
+        if (targetContent) {
+            targetContent.classList.add('active');
+        }
+    });
+});
 
 const lightbox = document.getElementById('lightbox');
 const lightboxContent = document.querySelector('.lightbox-content');
@@ -96,9 +145,7 @@ const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const galleryItems = document.querySelectorAll('.gallery-item img');
 
-
 let mediaItems = [];
-
 
 galleryItems.forEach((img, index) => {
     mediaItems.push({
@@ -107,14 +154,12 @@ galleryItems.forEach((img, index) => {
         alt: img.alt
     });
 
-
     img.addEventListener('click', () => {
         openLightbox(index);
     });
 
     img.style.cursor = 'pointer';
 });
-
 
 const videoElement = document.querySelector('.video-wrapper video source');
 if (videoElement) {
@@ -194,6 +239,27 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') prevSlide();
 });
 
+// --- Lightbox Touch/Swipe Support ---
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            nextSlide(); // Swipe left = next
+        } else {
+            prevSlide(); // Swipe right = prev
+        }
+    }
+});
 
 function showCustomAlert(message) {
     const modal = document.getElementById('message-modal');
@@ -204,7 +270,6 @@ function showCustomAlert(message) {
         msgElement.textContent = message;
         modal.classList.add('active');
 
-
         okBtn.onclick = function () {
             modal.classList.remove('active');
         };
@@ -212,6 +277,7 @@ function showCustomAlert(message) {
         alert(message);
     }
 }
+
 const videoPlayer = document.getElementById('video-player');
 if (videoPlayer) {
     // Responsive Poster Logic

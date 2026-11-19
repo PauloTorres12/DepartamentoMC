@@ -4,10 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DepartamentoMC</title>
+
+    <!-- SEO: Título optimizado con palabras clave de búsqueda turística -->
+    <title>Departamento en Alquiler Temporario en Mina Clavero | Habilitado - A 4 cuadras de la playa</title>
+
     <link rel="icon" type="image/x-icon" href="/favicon/icono-depto.png">
+
+    <!-- SEO: Meta description persuasiva para Google -->
     <meta name="description"
-        content="Descubre este increíble departamento con vistas espectaculares y ubicación privilegiada.">
+        content="Alquiler temporario en Mina Clavero, Córdoba. Departamento habilitado por la Municipalidad para 3 personas. Cochera techada, asador, quincho, WiFi fibra óptica, aire acondicionado. A solo 4 cuadras de la playa central y 5 del centro. ¡Reservá ahora!">
+
+    <!-- Open Graph: Previsualización en WhatsApp y Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Departamento en Alquiler Temporario en Mina Clavero | Habilitado">
+    <meta property="og:description"
+        content="Departamento habilitado para 3 personas en Mina Clavero. Cochera techada, asador, quincho, WiFi fibra óptica. A 4 cuadras de la playa central. ¡Consultá disponibilidad!">
+    <meta property="og:image" content="/imagenes/depto.jpg">
+    <meta property="og:url" content="https://departamentomc.com/">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Datos Estructurados Schema.org: LodgingBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "DepartamentoMC - Alquiler Temporario en Mina Clavero",
+        "description": "Departamento en alquiler temporario habilitado por la Municipalidad de Mina Clavero. Capacidad para 3 personas con cochera techada, asador, quincho, WiFi fibra óptica y aire acondicionado.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Olmos Sur 2572",
+            "addressLocality": "Mina Clavero",
+            "addressRegion": "Córdoba",
+            "addressCountry": "AR",
+            "postalCode": "X5889"
+        },
+        "telephone": ["+5493544618498", "+5493544465397"],
+        "url": "https://departamentomc.com/",
+        "image": "/imagenes/depto.jpg",
+        "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WiFi fibra óptica", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Estacionamiento techado", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Aire acondicionado", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Asador y quincho", "value": true }
+        ],
+        "sameAs": "https://www.instagram.com/deptomc/",
+        "hasMap": "https://www.google.com/maps/place/Olmos+Sur+2572,+Mina+Clavero,+Córdoba",
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "name": "Habilitación Municipal",
+            "url": "https://minaclavero.gov.ar/alojamientodetalle.php?id=16006"
+        }
+    }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +72,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#inicio" class="logo">
-                <img src="/imagenes/logo.1.png" alt="logo-mina-clavero">
+                <img src="/imagenes/logo.1.png" alt="Logo DepartamentoMC - Alquiler temporario en Mina Clavero">
             </a>
             <button class="menu-toggle" aria-label="Abrir menú">
                 <i class="fas fa-bars"></i>
@@ -38,23 +87,27 @@
         </div>
     </nav>
 
-    <!-- Header -->
+    <!-- Header / Hero -->
     <header id="inicio" class="hero">
         <div class="hero-content">
-            <h1>¡Viví las vacaciones de tu vida!</h1>
+            <!-- SEO: Un solo h1 optimizado con palabras clave de ubicación -->
+            <h1>Departamento en Alquiler Temporario en Mina Clavero, Córdoba</h1>
+            <p class="hero-subtitle">¡Viví las vacaciones de tu vida a solo 4 cuadras de la playa central!</p>
             <div class="hero-buttons">
                 <a href="#galeria" class="btn-outline">Ver Fotos</a>
-                <a href="#contacto" class="btn-primary">Agendar Visita</a>
+                <!-- CRO: Cambio de "Agendar Visita" a "Consultar Disponibilidad" -->
+                <a href="#contacto" class="btn-primary">Consultar Disponibilidad</a>
             </div>
         </div>
         <div class="hero-overlay"></div>
         <picture class="hero-bg">
             <source media="(max-width: 768px)" srcset="imagenes/fondo-celular.jpg">
-            <img src="imagenes/puente-resi.jpg" alt="foto-rio" class="hero-bg">
+            <img src="imagenes/puente-resi.jpg"
+                alt="Paisaje del río en Mina Clavero, Córdoba - Destino turístico" class="hero-bg">
         </picture>
     </header>
 
-    <!-- Inscripción -->
+    <!-- Inscripción / Habilitación -->
     <section id="inscripcion" class="section">
         <div class="container">
             <div class="section-header">
@@ -64,16 +117,15 @@
                 <p class="inscription-text">
                     Este departamento se encuentra inscripto y habilitado por la Municipalidad de Mina Clavero.
                 </p>
-                <!-- Reemplazar '#' con el link real a la constancia o página de inscripción -->
                 <a href="https://minaclavero.gov.ar/alojamientodetalle.php?id=16006" target="_blank"
-                    class="btn-primary">
+                    rel="noopener noreferrer" class="btn-primary">
                     <i class="fas fa-check-circle inscription-btn-icon"></i> Ver Constancia de Habilitación
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Galeria -->
+    <!-- Galería -->
     <section id="galeria" class="section gallery">
         <div class="container">
             <div class="section-header">
@@ -82,27 +134,35 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item item-1">
-                    <img src="/imagenes/depto.jpg" alt="Foto de casa">
+                    <!-- SEO: Alt descriptivo para Google Imágenes -->
+                    <img src="/imagenes/depto.jpg"
+                        alt="Fachada del departamento en alquiler temporario en Mina Clavero, Córdoba" loading="lazy">
                 </div>
                 <div class="gallery-item item-2">
-                    <img src="/imagenes/pieza-1.jpg" alt="Pieza">
+                    <img src="/imagenes/pieza-1.jpg"
+                        alt="Dormitorio amplio para 3 personas en departamento de alquiler en Mina Clavero"
+                        loading="lazy">
                 </div>
                 <div class="gallery-item item-3">
-                    <img src="/imagenes/comedor-1.jpg" alt="Comedor">
+                    <img src="/imagenes/comedor-1.jpg"
+                        alt="Comedor luminoso del departamento temporario en Mina Clavero" loading="lazy">
                 </div>
                 <div class="gallery-item item-4">
-                    <img src="/imagenes/baño-1.jpg" alt="Baño">
+                    <!-- Ruta corregida: baño-1.jpg → bano-1.jpg (sin ñ) -->
+                    <img src="/imagenes/bano-1.jpg"
+                        alt="Baño completo del departamento en alquiler en Mina Clavero, Córdoba" loading="lazy">
                 </div>
                 <div class="gallery-item item-5">
-                    <img src="/imagenes/terraza-1.jpg" alt="Terraza">
+                    <img src="/imagenes/terraza-1.jpg" alt="Terraza con vista del alojamiento en Mina Clavero"
+                        loading="lazy">
                 </div>
             </div>
 
             <!-- Video -->
             <div class="video-container">
                 <div class="video-wrapper">
-                    <!-- video de ejemplo para reemplazar posteriormente -->
-                    <video id="video-player" controls poster="imagenes/cartel-mina.jpg">
+                    <!-- Performance: preload="none" para no consumir datos móviles en la carga inicial -->
+                    <video id="video-player" controls poster="imagenes/cartel-mina.jpg" preload="none">
                         <source src="videos/Video-depto.mp4" type="video/mp4">
                         Tu navegador no soporta la etiqueta de video.
                     </video>
@@ -111,7 +171,7 @@
         </div>
     </section>
 
-    <!-- Caracteristicas -->
+    <!-- Características -->
     <section id="caracteristicas" class="section features">
         <div class="container">
             <div class="section-header">
@@ -158,22 +218,36 @@
         <div class="container">
             <div class="section-header">
                 <h2>Ubicación</h2>
-                <p>¿Donde nos encontramos?</p>
+                <!-- Ortografía corregida: "Donde" → "Dónde" -->
+                <p>¿Dónde nos encontramos?</p>
             </div>
             <div class="location-content">
                 <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d632.5234036733314!2d-65.00012636102896!3d-31.73036848466449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d25df42666241%3A0x2672fbd73fc3f1a2!2sOlmos%20Sur%202572%2C%20X5889%20Mina%20Clavero%2C%20C%C3%B3rdoba!5e1!3m2!1ses-419!2sar!4v1765902329680!5m2!1ses-419!2sar"
-                        width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Pestañas: Mapa / Street View -->
+                    <div class="map-tabs">
+                        <button class="map-tab active" data-tab="mapa"><i class="fas fa-map-location-dot"></i> Ver Mapa</button>
+                        <button class="map-tab" data-tab="streetview"><i class="fas fa-street-view"></i> Vista de Calle</button>
+                    </div>
+                    <div class="map-tab-content active" id="tab-mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d632.5234036733314!2d-65.00012636102896!3d-31.73036848466449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d25df42666241%3A0x2672fbd73fc3f1a2!2sOlmos%20Sur%202572%2C%20X5889%20Mina%20Clavero%2C%20C%C3%B3rdoba!5e1!3m2!1ses-419!2sar!4v1765902329680!5m2!1ses-419!2sar"
+                            width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="map-tab-content" id="tab-streetview">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!4v1795124665520!6m8!1m7!1s0iew8TazLApiOvi5xg-pVw!2m2!1d-31.73039949995824!2d-64.99976177910185!3f249.3232237752335!4f2.9408485620626834!5f1.5418616683214625"
+                            width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
                 </div>
                 <div class="location-details">
                     <h3>¿Qué tienes cerca?</h3>
                     <ul>
                         <li><i class="fa-solid fa-water"></i>4 Cuadras de la playa central</li>
                         <li><i class="fa-solid fa-cash-register"></i> 5 Cuadras del casino</li>
-                        <li><i class="fa-solid fa-bag-shopping"></i> 5 Cuadras del centro </li>
-                        <li><i class="fa-solid fa-road"></i> 4 Cuadras de la ruta de ingreso </li>
+                        <li><i class="fa-solid fa-bag-shopping"></i> 5 Cuadras del centro</li>
+                        <li><i class="fa-solid fa-road"></i> 4 Cuadras de la ruta de ingreso</li>
                     </ul>
                 </div>
             </div>
@@ -183,46 +257,69 @@
     <!-- Contacto -->
     <section id="contacto" class="section contact">
         <div class="container contact-container">
-            <div class="contact-info">
-                <h2>¿Te interesa?</h2>
-                <p>Contáctanos mediante el formulario o por telefono para agendar una visita o recibir más información.
-                    No dejes pasar esta oportunidad única.
-                </p>
-                <div class="contact-methods">
-                    <div class="method">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>3544 61-8498 | Liliana</span>
-                    </div>
-                    <div class="method">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>3544 46-5397 | Edgardo</span>
-                    </div>
+            <!-- CRO: Info de contacto a ancho completo con WhatsApp como prioridad -->
+            <div class="contact-info contact-full-width">
+                <h2>¡Consultá Disponibilidad!</h2>
+                <p>Escribinos por WhatsApp para consultar disponibilidad y tarifas, o dejanos tu consulta por correo.
+                    ¡Reservá tu estadía en Mina Clavero!</p>
+
+                <!-- CRO: Botones de WhatsApp prominentes (Prioridad #1) -->
+                <div class="whatsapp-buttons">
+                    <a href="https://wa.me/5493544618498?text=Hola%20Liliana%2C%20vengo%20desde%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20y%20tarifas%20del%20departamento%20en%20Mina%20Clavero."
+                        target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="wa-info">
+                            <span class="wa-name">Liliana</span>
+                            <span class="wa-phone">3544 61-8498</span>
+                        </span>
+                    </a>
+                    <a href="https://wa.me/5493544465397?text=Hola%20Edgardo%2C%20vengo%20desde%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20y%20tarifas%20del%20departamento%20en%20Mina%20Clavero."
+                        target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="wa-info">
+                            <span class="wa-name">Edgardo</span>
+                            <span class="wa-phone">3544 46-5397</span>
+                        </span>
+                    </a>
                 </div>
+
                 <div class="social-links">
                     <p>¡Conoce nuestro instagram!</p>
-                    <a href="https://www.instagram.com/deptomc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/deptomc/" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <form class="contact-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required placeholder="Tu nombre">
+
+            <!-- Formulario en segundo plano: dentro de un acordeón desplegable -->
+            <div class="form-accordion">
+                <button class="accordion-toggle" type="button">
+                    <i class="fas fa-envelope"></i> ¿Preferís escribirnos por correo? Dejanos tu consulta acá
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </button>
+                <div class="accordion-content">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <!-- Ortografía corregida: "telefono" → "teléfono" -->
+                            <label for="telefono">Número de teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234-5678">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required
+                                placeholder="Hola, me gustaría consultar disponibilidad del departamento..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">Enviar Mensaje</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Número de teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234-5678">
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" rows="4" required
-                        placeholder="Hola, me gustaría visitar el departamento..."></textarea>
-                </div>
-                <button type="submit" class="btn-primary full-width">Enviar Mensaje</button>
-            </form>
+            </div>
         </div>
     </section>
 
@@ -233,7 +330,7 @@
         </div>
     </footer>
 
-
+    <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <span class="close-btn">&times;</span>
         <button class="prev-btn">&#10094;</button>
@@ -248,6 +345,24 @@
             <h3>DepartamentoMC</h3>
             <p id="modal-message"></p>
             <button id="modal-ok-btn" class="btn-primary">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <div class="whatsapp-float" id="whatsapp-float">
+        <button class="whatsapp-float-btn" aria-label="Contactar por WhatsApp" id="whatsapp-float-toggle">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <div class="whatsapp-float-menu" id="whatsapp-float-menu">
+            <p class="whatsapp-float-title">Escribinos por WhatsApp</p>
+            <a href="https://wa.me/5493544618498?text=Hola%20Liliana%2C%20vengo%20desde%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20y%20tarifas%20del%20departamento%20en%20Mina%20Clavero."
+                target="_blank" rel="noopener noreferrer" class="whatsapp-float-option">
+                <i class="fab fa-whatsapp"></i> Liliana · 3544 61-8498
+            </a>
+            <a href="https://wa.me/5493544465397?text=Hola%20Edgardo%2C%20vengo%20desde%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20y%20tarifas%20del%20departamento%20en%20Mina%20Clavero."
+                target="_blank" rel="noopener noreferrer" class="whatsapp-float-option">
+                <i class="fab fa-whatsapp"></i> Edgardo · 3544 46-5397
+            </a>
         </div>
     </div>
 

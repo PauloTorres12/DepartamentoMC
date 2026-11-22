@@ -99,6 +99,30 @@ if (accordionToggle && accordionContent) {
     });
 }
 
+// --- FAQ Accordion Toggle ---
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isActive = question.classList.contains('active');
+
+        // Cerrar otras preguntas para mantener un acordeón limpio
+        faqQuestions.forEach(q => {
+            q.classList.remove('active');
+            if (q.nextElementSibling) {
+                q.nextElementSibling.classList.remove('active');
+            }
+        });
+
+        // Alternar la pregunta seleccionada si no estaba activa
+        if (!isActive) {
+            question.classList.add('active');
+            if (answer) answer.classList.add('active');
+        }
+    });
+});
+
 // --- Floating WhatsApp Button ---
 const waFloatToggle = document.getElementById('whatsapp-float-toggle');
 const waFloatMenu = document.getElementById('whatsapp-float-menu');
